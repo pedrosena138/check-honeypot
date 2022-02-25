@@ -1,3 +1,4 @@
+import { NotFoundException } from "@config/exceptions";
 import { HoneypotService } from "@services/HoneypotService";
 
 import { ISearchHoneypotDTO } from "./SearchHoneypotDTO";
@@ -21,6 +22,10 @@ export class SearchHoneypotUseCase {
       data.token,
       data.chain
     );
+
+    if (response.status !== 200 || response.data["Error"]) {
+      throw new NotFoundException("Honeypot not found");
+    }
     return response.data;
   }
 }
