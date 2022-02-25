@@ -29,6 +29,12 @@ jobs:
       - run:
           name: Run tests
           command: yarn test
+      - run:
+          name: Run build
+          command: yarn build
+      - run:
+          name: Run start
+          command: node dist/server.js
 
 workflows:
   # Below is the definition of your workflow.
