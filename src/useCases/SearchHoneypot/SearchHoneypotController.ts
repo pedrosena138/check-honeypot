@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+
 import { SearchHoneypotUseCase } from "./SearchHoneypotUseCase";
 
 export class SearchHoneypotController {

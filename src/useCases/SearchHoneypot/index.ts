@@ -1,4 +1,5 @@
 import { HoneypotService } from "@services/HoneypotService";
+
 import { SearchHoneypotController } from "./SearchHoneypotController";
 import { SearchHoneypotUseCase } from "./SearchHoneypotUseCase";
 

@@ -1,4 +1,5 @@
 import { HoneypotService } from "@services/HoneypotService";
+
 import { ISearchHoneypotDTO } from "./SearchHoneypotDTO";
 
 interface HoneypotData {

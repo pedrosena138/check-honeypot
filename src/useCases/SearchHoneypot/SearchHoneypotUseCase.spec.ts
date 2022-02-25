@@ -1,4 +1,5 @@
 import { HoneypotService } from "@services/HoneypotService";
+
 import { SearchHoneypotUseCase } from "./SearchHoneypotUseCase";
 
 describe("SearchHoneypotUseCase", () => {

@@ -1,6 +1,7 @@
-import axios, { AxiosInstance, AxiosError, AxiosResponse } from "axios";
-import { HONEYPOT_URL } from "@config/variables";
+import axios, { AxiosInstance, AxiosResponse } from "axios";
+
 import { UnexpectedException } from "@config/exceptions";
+import { HONEYPOT_URL } from "@config/variables";
 export class HoneypotService {
   private api: AxiosInstance;
   constructor() {
@@ -11,7 +12,7 @@ export class HoneypotService {
 
   async isHoneypot(
     token: string,
-    chain: string = "bsc2" //default chain
+    chain = "bsc2" //default chain
   ): Promise<AxiosResponse> {
     try {
       const response = await this.api.get(
