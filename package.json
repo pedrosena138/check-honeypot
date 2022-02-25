@@ -7,7 +7,8 @@
     "dev": "tsnd -r tsconfig-paths/register --respawn --transpile-only  --ignore-watch node_modules --no-notify src/server.ts",
     "start": "node dist/server.js",
     "test": "jest",
-    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored"
+    "pre-build": "npm run test",
+    "build": "npm run pre-build && babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored"
   },
   "dependencies": {
     "axios": "^0.26.0",
